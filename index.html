@@ -3,188 +3,313 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BMUN 2026</title>
+<title>BMUN 2026 - Liceo de los Andes</title>
 
 <style>
+
 body{
     margin:0;
-    font-family: Arial, sans-serif;
-    background-color:#0b1d3a;
+    font-family:'Segoe UI', sans-serif;
+    background-color:#0f1c2e;
     color:white;
-    scroll-behavior:smooth;
 }
 
-/* NAVBAR */
-nav{
-    background:#08152b;
-    padding:15px 20px;
+header{
     position:fixed;
     width:100%;
     top:0;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    padding:15px 40px;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(6px);
     z-index:1000;
 }
 
-.logo{
-    font-weight:bold;
-    font-size:18px;
+header img{
+    height:55px;
 }
 
-.menu-icon{
-    font-size:24px;
-    cursor:pointer;
-}
-
-.menu{
-    display:none;
-    flex-direction:column;
-    background:#112a5c;
-    position:absolute;
-    top:60px;
-    right:20px;
-    border-radius:8px;
-    padding:10px;
-}
-
-.menu a{
-    color:white;
+nav a{
+    margin-left:25px;
     text-decoration:none;
-    padding:8px 10px;
+    color:white;
+    font-weight:500;
+    letter-spacing:1px;
 }
 
-.menu a:hover{
-    background:#1e4bb8;
-    border-radius:5px;
+nav a:hover{
+    opacity:0.7;
 }
 
-/* HERO */
-header{
+.hero{
     height:100vh;
+    background:linear-gradient(rgba(10,20,40,0.75), rgba(10,20,40,0.75)),
+    url('https://images.unsplash.com/photo-1529101091764-c3526daf38fe');
+    background-size:cover;
+    background-position:center;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:20px;
 }
 
-header h1{
-    font-size:48px;
-    margin-bottom:10px;
+.hero h1{
+    font-size:70px;
+    margin:0;
 }
 
-header p{
-    font-size:20px;
-    max-width:600px;
-}
-
-.btn{
+.hero p{
+    font-size:22px;
+    max-width:700px;
     margin-top:20px;
-    padding:12px 25px;
-    background:#1e4bb8;
-    color:white;
-    text-decoration:none;
-    border-radius:6px;
-    transition:0.3s;
 }
 
-.btn:hover{
-    background:#2f6cff;
-}
-
-/* INFO SECTION */
 section{
-    padding:80px 20px;
-    background:white;
-    color:#0b1d3a;
+    padding:100px 60px;
+}
+
+h2{
     text-align:center;
+    margin-bottom:50px;
+    font-size:40px;
 }
 
-section h2{
-    margin-bottom:20px;
+h3{
+    margin-bottom:30px;
 }
 
-.card-container{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-    margin-top:30px;
+.about, .problem{
+    max-width:900px;
+    margin:auto;
+    line-height:1.8;
+    font-size:18px;
+}
+
+.committees{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:30px;
 }
 
 .card{
-    background:#f2f2f2;
-    padding:20px;
-    width:250px;
+    background-color:#1b2a41;
+    padding:25px;
     border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    cursor:pointer;
+    transition:0.3s;
 }
 
-@media(max-width:768px){
-    .card-container{
-        flex-direction:column;
-        align-items:center;
-    }
+.card:hover{
+    background-color:#243b63;
 }
+
+.committee-info{
+    display:none;
+    margin-top:15px;
+    font-size:15px;
+    line-height:1.6;
+    color:#cbd6f0;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background-color:#0b1423;
+}
+
 </style>
 </head>
 
 <body>
 
-<nav>
-    <div class="logo">BMUN 2026</div>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    <div class="menu" id="menu">
-        <a href="#">Inicio</a>
-        <a href="#info">Sobre BMUN</a>
-        <a href="#">Comités</a>
-        <a href="#">Delegaciones</a>
-        <a href="#">Contacto</a>
-    </div>
-</nav>
-
 <header>
-    <h1>BMUN 2026</h1>
-    <p>Un espacio de diplomacia, debate y cooperación internacional donde los estudiantes simulan el trabajo de las Naciones Unidas.</p>
-    <a href="#info" class="btn">Saber más</a>
+<img src="logo.png" alt="Liceo de los Andes">
+<nav>
+<a href="#home">HOME</a>
+<a href="#about">ABOUT</a>
+<a href="#problem">PROYECTO</a>
+<a href="#committees">COMMITTEES</a>
+</nav>
 </header>
 
-<section id="info">
-    <h2>¿Qué es BMUN?</h2>
-    <p>
-        BMUN es un Modelo de Naciones Unidas donde los participantes representan delegaciones de distintos países
-        y debaten problemáticas internacionales actuales, desarrollando habilidades de oratoria,
-        negociación y pensamiento crítico.
-    </p>
-
-    <div class="card-container">
-        <div class="card">
-            <h3>Comités</h3>
-            <p>Simulación de órganos como el Consejo de Seguridad, Asamblea General y otros espacios diplomáticos.</p>
-        </div>
-
-        <div class="card">
-            <h3>Delegaciones</h3>
-            <p>Cada estudiante representa un país y defiende sus intereses con argumentos sólidos y estratégicos.</p>
-        </div>
-
-        <div class="card">
-            <h3>Temas Globales</h3>
-            <p>Se discuten conflictos internacionales, cambio climático, derechos humanos y economía mundial.</p>
-        </div>
-    </div>
+<section class="hero" id="home">
+<h1>BMUN 2026</h1>
+<p>Modelo de Naciones Unidas del Liceo de los Andes. Formación académica, liderazgo y diplomacia con impacto social.</p>
 </section>
 
+<section id="about">
+<h2>About Us</h2>
+<div class="about">
+BMUN surge como una iniciativa académica del Liceo de los Andes orientada a fortalecer el pensamiento crítico, la investigación rigurosa y el liderazgo juvenil. A través de la simulación diplomática, los estudiantes desarrollan habilidades argumentativas y éticas aplicadas a problemáticas reales del contexto nacional e internacional.
+</div>
+</section>
+
+<section id="problem">
+<h2>Pregunta Problema y Alcances</h2>
+<div class="problem">
+¿Cómo puede una simulación académica contribuir a la formación de ciudadanos críticos y comprometidos con la transformación social?  
+BMUN busca responder esta cuestión mediante espacios estructurados de debate donde los participantes investigan, representan posturas oficiales y formulan soluciones viables. El proyecto fortalece competencias investigativas, conciencia global y liderazgo estratégico.
+</div>
+</section>
+
+<section id="committees">
+<h2>Committees</h2>
+
+<!-- NACIONALES -->
+<h3>Subsecretaría Nacionales</h3>
+<div class="committees">
+
+<div class="card" onclick="toggleInfo(this)">
+CONGRESO
+<div class="committee-info">
+Impacto y protección civil en zonas afectadas por la minería ilegal. Se analizan riesgos sociales, ambientales y estrategias legislativas para proteger comunidades vulnerables.
+</div>
+</div>
+
+<div class="card" onclick="toggleInfo(this)">
+CONSEJO MUNICIPAL DE JUVENTUD
+<div class="committee-info">
+Acceso equitativo a educación, empleo digno y participación cultural para el desarrollo integral juvenil en Guadalajara de Buga.
+</div>
+</div>
+
+<div class="card" onclick="toggleInfo(this)">
+GAU NACIONAL
+<div class="committee-info">
+Articulación interinstitucional para fortalecer la lucha contra la corrupción y la protección de derechos ciudadanos en Colombia.
+</div>
+</div>
+
+<div class="card" onclick="toggleInfo(this)">
+MINISTERIO DE EXTERIORES
+<div class="committee-info">
+Crisis diplomática con Estados Unidos y estrategias para preservar estabilidad política y económica.
+</div>
+</div>
+
+</div>
+
+<!-- ONU -->
+<h3 style="margin-top:60px;">Subsecretaría ONU</h3>
+<div class="committees">
+
+<div class="card" onclick="toggleInfo(this)">
+CSW
+<div class="committee-info">
+Prohibición del acceso de mujeres a educación, trabajo y atención médica en Afganistán como violación sistemática de derechos humanos.
+</div>
+</div>
+
+<div class="card" onclick="toggleInfo(this)">
+PNUMA
+<div class="committee-info">
+Impacto ambiental del uso de inteligencia artificial debido a su consumo energético.
+</div>
+</div>
+
+<div class="card" onclick="toggleInfo(this)">
+CONSEJO DE SEGURIDAD
+<div class="committee-info">
+Contraterrorismo global: protección legítima o amenaza a derechos humanos.
+</div>
+</div>
+
+<div class="card" onclick="toggleInfo(this)">
+OIEA
+<div class="committee-info">
+Usos pacíficos y desafíos de la energía nuclear en la transición energética y seguridad internacional.
+</div>
+</div>
+
+<div class="card" onclick="toggleInfo(this)">
+OMS
+<div class="committee-info">
+Uso de inteligencia artificial y robótica en la salud.
+</div>
+</div>
+
+<div class="card" onclick="toggleInfo(this)">
+ACNUDH
+<div class="committee-info">
+Implicaciones humanitarias del conflicto en Gaza y protección de población civil.
+</div>
+</div>
+
+</div>
+
+<!-- ESPECIALIZADAS -->
+<h3 style="margin-top:60px;">Subsecretaría Especializadas</h3>
+<div class="committees">
+
+<div class="card" onclick="toggleInfo(this)">
+OMC
+<div class="committee-info">
+Impacto del comercio digital y plataformas dinámicas en el comercio multilateral.
+</div>
+</div>
+
+<div class="card" onclick="toggleInfo(this)">
+UNICEF
+<div class="committee-info">
+Acceso a educación para menores en zonas de conflicto armado.
+</div>
+</div>
+
+<div class="card" onclick="toggleInfo(this)">
+OIT
+<div class="committee-info">
+Explotación laboral en producción industrial en Asia.
+</div>
+</div>
+
+</div>
+
+<!-- CRISIS -->
+<h3 style="margin-top:60px;">Subsecretaría Crisis</h3>
+<div class="committees">
+
+<div class="card" onclick="toggleInfo(this)">
+GAUC
+<div class="committee-info">
+Biotecnología y armas biológicas: riesgos, regulación y respuesta estratégica en contexto de crisis.
+</div>
+</div>
+
+<div class="card" onclick="toggleInfo(this)">
+AGENTES DE CRISIS
+<div class="committee-info">
+Equipo encargado de dinamizar escenarios mediante comunicados estratégicos.
+</div>
+</div>
+
+</div>
+
+<!-- PRENSA -->
+<h3 style="margin-top:60px;">Prensa</h3>
+<div class="committees">
+
+<div class="card" onclick="toggleInfo(this)">
+AGENTES DE PRENSA Y LOGÍSTICA
+<div class="committee-info">
+Cobertura, documentación oficial y coordinación operativa del evento.
+</div>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 BMUN - Liceo de los Andes | Buga, Valle
+</footer>
+
 <script>
-function toggleMenu(){
-    var menu = document.getElementById("menu");
-    if(menu.style.display === "flex"){
-        menu.style.display = "none";
-    }else{
-        menu.style.display = "flex";
-    }
+function toggleInfo(card){
+const info = card.querySelector(".committee-info");
+info.style.display = info.style.display === "block" ? "none" : "block";
 }
 </script>
 
