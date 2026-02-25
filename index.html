@@ -94,9 +94,9 @@ header p{
     background:#2f6cff;
 }
 
-/* SECCIONES */
+/* INFO SECTION */
 section{
-    padding:100px 20px;
+    padding:80px 20px;
     background:white;
     color:#0b1d3a;
     text-align:center;
@@ -120,22 +120,8 @@ section h2{
     width:250px;
     border-radius:10px;
     box-shadow:0 5px 15px rgba(0,0,0,0.2);
-    cursor:pointer;
-    transition:0.3s;
 }
 
-.card:hover{
-    transform:scale(1.05);
-}
-
-/* COMITES DETALLE */
-.comite{
-    text-align:left;
-    max-width:900px;
-    margin:30px auto;
-}
-
-/* RESPONSIVE */
 @media(max-width:768px){
     .card-container{
         flex-direction:column;
@@ -151,101 +137,44 @@ section h2{
     <div class="logo">BMUN 2026</div>
     <div class="menu-icon" onclick="toggleMenu()">☰</div>
     <div class="menu" id="menu">
-        <a href="#inicio">Inicio</a>
-        <a href="#comites">Comités</a>
-        <a href="#sobre">Sobre Nosotros</a>
+        <a href="#">Inicio</a>
+        <a href="#info">Sobre BMUN</a>
+        <a href="#">Comités</a>
+        <a href="#">Delegaciones</a>
+        <a href="#">Contacto</a>
     </div>
 </nav>
 
-<header id="inicio">
+<header>
     <h1>BMUN 2026</h1>
-    <p>Modelo de Naciones Unidas Municipal de Buga: diplomacia, liderazgo juvenil y participación ciudadana.</p>
-    <a href="#sobre" class="btn">Conocer el Proyecto</a>
+    <p>Un espacio de diplomacia, debate y cooperación internacional donde los estudiantes simulan el trabajo de las Naciones Unidas.</p>
+    <a href="#info" class="btn">Saber más</a>
 </header>
 
-<section>
-    <h2>Explora BMUN</h2>
+<section id="info">
+    <h2>¿Qué es BMUN?</h2>
+    <p>
+        BMUN es un Modelo de Naciones Unidas donde los participantes representan delegaciones de distintos países
+        y debaten problemáticas internacionales actuales, desarrollando habilidades de oratoria,
+        negociación y pensamiento crítico.
+    </p>
 
     <div class="card-container">
-        <div class="card" onclick="location.href='#comites'">
+        <div class="card">
             <h3>Comités</h3>
-            <p>Conoce todos los espacios de debate del BMUN Municipal.</p>
+            <p>Simulación de órganos como el Consejo de Seguridad, Asamblea General y otros espacios diplomáticos.</p>
         </div>
 
-        <div class="card" onclick="location.href='#sobre'">
-            <h3>Sobre Nosotros</h3>
-            <p>Descubre la estructura, propósito y alcance del proyecto BMUN.</p>
+        <div class="card">
+            <h3>Delegaciones</h3>
+            <p>Cada estudiante representa un país y defiende sus intereses con argumentos sólidos y estratégicos.</p>
+        </div>
+
+        <div class="card">
+            <h3>Temas Globales</h3>
+            <p>Se discuten conflictos internacionales, cambio climático, derechos humanos y economía mundial.</p>
         </div>
     </div>
-</section>
-
-<!-- COMITES -->
-<section id="comites">
-    <h2>Comités BMUN Municipal</h2>
-
-    <div class="comite">
-        <h3>Congreso</h3>
-        <p>Debate legislativo sobre impacto y protección civil en zonas afectadas por minería ilegal. Producto final: proyecto de ley.</p>
-
-        <h3>Consejo Municipal de Juventud</h3>
-        <p>Acceso equitativo a educación, empleo digno y participación cultural para la juventud en Guadalajara de Buga.</p>
-
-        <h3>GAU Nacional</h3>
-        <p>Articulación interinstitucional para fortalecer la lucha contra corrupción e impunidad en Colombia.</p>
-
-        <h3>Ministerio de Exteriores</h3>
-        <p>Crisis diplomática con Estados Unidos y estrategias de política exterior.</p>
-
-        <h3>ONU - CSW</h3>
-        <p>Prohibición del acceso de mujeres a educación, trabajo y salud en Afganistán como violación sistemática de DDHH.</p>
-
-        <h3>PNUMA</h3>
-        <p>Impacto ambiental del uso de Inteligencia Artificial por consumo energético.</p>
-
-        <h3>Consejo de Seguridad</h3>
-        <p>Contraterrorismo global: protección legítima o amenaza a los derechos humanos.</p>
-
-        <h3>OIEA</h3>
-        <p>Usos pacíficos y desafíos de la energía nuclear en la transición energética.</p>
-
-        <h3>OMS</h3>
-        <p>Uso de la IA y la robótica en la salud.</p>
-
-        <h3>ACNUDH</h3>
-        <p>Implicaciones humanitarias del conflicto en Gaza y protección de población civil.</p>
-    </div>
-</section>
-
-<!-- SOBRE NOSOTROS -->
-<section id="sobre">
-    <h2>Sobre BMUN Municipal</h2>
-
-    <h3>Pregunta Problema</h3>
-    <p>
-    ¿Cómo transformar los Modelos de Naciones Unidas organizados por instituciones educativas en un espacio municipal intercolegiado que fortalezca la participación juvenil, la formación política y el liderazgo cívico en la ciudad?
-    </p>
-
-    <h3>Respuesta</h3>
-    <p>
-    La consolidación de un Modelo de Naciones Unidas Municipal permite articular instituciones educativas, entidades públicas y jóvenes líderes en un espacio común de formación democrática. A través de la simulación diplomática, se fortalecen competencias ciudadanas, liderazgo juvenil y participación política activa, generando impacto territorial sostenible.
-    </p>
-
-    <h3>Alcances del Proyecto</h3>
-    <ul style="text-align:left; max-width:800px; margin:auto;">
-        <li>Modelo intercolegiado municipal permanente.</li>
-        <li>Articulación con Secretaría de Educación y Consejeros de Juventud.</li>
-        <li>Fortalecimiento de habilidades de debate, negociación y liderazgo.</li>
-        <li>Proyección regional del municipio.</li>
-        <li>Creación de red juvenil activa.</li>
-    </ul>
-
-    <h3>5W1H</h3>
-    <p><strong>Qué:</strong> Modelo de Naciones Unidas Municipal intercolegiado.</p>
-    <p><strong>Por qué:</strong> Fortalecer liderazgo juvenil y formación ciudadana.</p>
-    <p><strong>Quiénes:</strong> Estudiantes, docentes asesores, Secretaría de Educación y Consejeros de Juventud.</p>
-    <p><strong>Dónde:</strong> Guadalajara de Buga.</p>
-    <p><strong>Cuándo:</strong> Año académico 2025-2026.</p>
-    <p><strong>Cómo:</strong> Mediante articulación institucional, encuestas, cronograma formativo y ejecución oficial del modelo.</p>
 </section>
 
 <script>
@@ -258,6 +187,9 @@ function toggleMenu(){
     }
 }
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
