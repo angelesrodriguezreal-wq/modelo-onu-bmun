@@ -127,7 +127,26 @@ section h2{
         flex-direction:column;
         align-items:center;
     }
+/* SECCIÓN COMITÉS */
+#comites{
+    padding:100px 20px;
+    background:#f4f6fb;
+    color:#0b1d3a;
+    text-align:center;
 }
+
+#comites h2{
+    margin-bottom:40px;
+}
+
+.imagen-comites{
+    width:90%;
+    max-width:1000px;
+    border-radius:12px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.3);
+}    
+}
+    
 </style>
 </head>
 
@@ -159,11 +178,12 @@ section h2{
         negociación y pensamiento crítico.
     </p>
 
-    <div class="card-container">
-        <div class="card">
-            <h3>Comités</h3>
-            <p>Simulación de órganos como el Consejo de Seguridad, Asamblea General y otros espacios diplomáticos.</p>
-        </div>
+   <a href="#comites" style="text-decoration:none; color:inherit;">
+    <div class="card">
+        <h3>Comités</h3>
+        <p>Simulación de órganos como el Consejo de Seguridad, Asamblea General y otros espacios diplomáticos.</p>
+    </div>
+</a>
 
         <div class="card">
             <h3>Delegaciones</h3>
@@ -176,7 +196,11 @@ section h2{
         </div>
     </div>
 </section>
-
+<section id="comites">
+    <h2>Organigrama de Comités BMUN</h2>
+    <img src="bmun.png" alt="Organigrama BMUN" class="imagen-comites">
+</section>
+    
 <script>
 function toggleMenu(){
     var menu = document.getElementById("menu");
