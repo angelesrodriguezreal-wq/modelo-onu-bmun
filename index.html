@@ -28,8 +28,16 @@ nav{
 }
 
 .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
     font-weight:bold;
     font-size:18px;
+}
+
+.logo-img{
+    width:35px;
+    height:auto;
 }
 
 .menu-icon{
@@ -149,6 +157,33 @@ section h2{
     border-radius:12px;
     box-shadow:0 15px 30px rgba(0,0,0,0.3);
 }
+.info-contenedor{
+    display:flex;
+    justify-content:center;
+    gap:60px;
+    margin-top:40px;
+    align-items:flex-start;
+}
+
+.lado-cards{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.lado-texto{
+    max-width:400px;
+    text-align:left;
+}
+
+.lado-texto h3{
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.lado-texto p{
+    line-height:1.6;
+}
     
 </style>
 </head>
@@ -156,7 +191,10 @@ section h2{
 <body>
 
 <nav>
-    <div class="logo">BMUN 2026</div>
+    <div class="logo">
+    <img src="logo.png" alt="Logo BMUN" class="logo-img">
+    BMUN 2026
+</div>
     <div class="menu-icon" onclick="toggleMenu()">☰</div>
     <div class="menu" id="menu">
         <a href="#">Inicio</a>
@@ -174,6 +212,7 @@ section h2{
 </header>
 
 <section id="info">
+
     <h2>¿Qué es BMUN?</h2>
     <p>
         BMUN es un Modelo de Naciones Unidas donde los participantes representan delegaciones de distintos países
@@ -181,23 +220,83 @@ section h2{
         negociación y pensamiento crítico.
     </p>
 
-   <a href="#comites" style="text-decoration:none; color:inherit;">
-    <div class="card">
-        <h3>Comités</h3>
-        <p>Simulación de órganos como el Consejo de Seguridad, Asamblea General y otros espacios diplomáticos.</p>
-    </div>
-</a>
+    <div class="info-contenedor">
 
-        <div class="card">
-            <h3>Delegaciones</h3>
-            <p>Cada estudiante representa un país y defiende sus intereses con argumentos sólidos y estratégicos.</p>
+        <div class="lado-cards">
+
+            <a href="#comites" style="text-decoration:none; color:inherit;">
+                <div class="card">
+                    <h3>Comités</h3>
+                    <p>Simulación de órganos como el Consejo de Seguridad, Asamblea General y otros espacios diplomáticos.</p>
+                </div>
+            </a>
+
+            <div class="card">
+                <h3>Delegaciones</h3>
+                <p>Cada estudiante representa un país y defiende sus intereses con argumentos sólidos y estratégicos.</p>
+            </div>
+
+            <div class="card">
+                <h3>Temas Globales</h3>
+                <p>Se discuten conflictos internacionales, cambio climático, derechos humanos y economía mundial.</p>
+            </div>
+
         </div>
 
-        <div class="card">
-            <h3>Temas Globales</h3>
-            <p>Se discuten conflictos internacionales, cambio climático, derechos humanos y economía mundial.</p>
+        <div class="lado-texto">
+            <h3>¿Por qué participar?</h3>
+            <p>
+                BMUN fortalece habilidades de liderazgo, argumentación y trabajo en equipo.
+                Es una experiencia académica que prepara a los estudiantes para enfrentar
+                desafíos globales con pensamiento crítico y visión internacional.
+            </p>
         </div>
+
     </div>
+
+<section id="info">
+
+    <h2>¿Qué es BMUN?</h2>
+    <p>
+        BMUN es un Modelo de Naciones Unidas donde los participantes representan delegaciones de distintos países
+        y debaten problemáticas internacionales actuales, desarrollando habilidades de oratoria,
+        negociación y pensamiento crítico.
+    </p>
+
+    <div class="info-contenedor">
+
+        <div class="lado-cards">
+
+            <a href="#comites" style="text-decoration:none; color:inherit;">
+                <div class="card">
+                    <h3>Comités</h3>
+                    <p>Simulación de órganos como el Consejo de Seguridad, Asamblea General y otros espacios diplomáticos.</p>
+                </div>
+            </a>
+
+            <div class="card">
+                <h3>Delegaciones</h3>
+                <p>Cada estudiante representa un país y defiende sus intereses con argumentos sólidos y estratégicos.</p>
+            </div>
+
+            <div class="card">
+                <h3>Temas Globales</h3>
+                <p>Se discuten conflictos internacionales, cambio climático, derechos humanos y economía mundial.</p>
+            </div>
+
+        </div>
+
+        <div class="lado-texto">
+            <h3>¿Por qué participar?</h3>
+            <p>
+                BMUN fortalece habilidades de liderazgo, argumentación y trabajo en equipo.
+                Es una experiencia académica que prepara a los estudiantes para enfrentar
+                desafíos globales con pensamiento crítico y visión internacional.
+            </p>
+        </div>
+
+    </div>
+
 </section>
 <section id="comites">
     <h2>Organigrama de Comités BMUN</h2>
