@@ -106,8 +106,9 @@ section h2{
     margin-bottom:20px;
 }
 
-.card-container{
+    .card-container{
     display:flex;
+    flex-direction:row; /* lo forzamos horizontal */
     flex-wrap:wrap;
     justify-content:center;
     gap:20px;
@@ -122,12 +123,15 @@ section h2{
     box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
+/* SOLO esto va dentro del media */
 @media(max-width:768px){
     .card-container{
         flex-direction:column;
         align-items:center;
     }
-/* SECCIÓN COMITÉS */
+}
+
+/* SECCIÓN COMITÉS (ESTO VA FUERA DEL MEDIA) */
 #comites{
     padding:100px 20px;
     background:#f4f6fb;
@@ -144,7 +148,6 @@ section h2{
     max-width:1000px;
     border-radius:12px;
     box-shadow:0 15px 30px rgba(0,0,0,0.3);
-}    
 }
     
 </style>
